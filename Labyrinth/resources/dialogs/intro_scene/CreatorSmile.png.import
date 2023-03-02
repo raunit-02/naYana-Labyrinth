@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/creator_smile.png-f4a8eca34483668187f5a7e07a820b57.stex"
+path="res://.import/CreatorSmile.png-80ced2761c4fc8afd720b1f7a91b6014.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/2D_models/Characters/creator/creator_smile.png"
-dest_files=[ "res://.import/creator_smile.png-f4a8eca34483668187f5a7e07a820b57.stex" ]
+source_file="res://resources/dialogs/intro_scene/CreatorSmile.png"
+dest_files=[ "res://.import/CreatorSmile.png-80ced2761c4fc8afd720b1f7a91b6014.stex" ]
 
 [params]
 
