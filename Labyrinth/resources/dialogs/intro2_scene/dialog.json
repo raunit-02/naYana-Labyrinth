@@ -1,5 +1,4 @@
 [
-    {"Name":"Player", "Binary" : 1, "Emotion":"Smile","Text":", Thats a very nice name" },
     {"Name":"Creator", "Binary" : 1, "Emotion":"Smile","Text":", Thats a very nice name" },
     {"Name":"Creator","Binary" : 0, "Emotion":"Smile","Text":"Meet your friends- Hirohsi, Nevah, Zulfiqar, and Anastasia. You guys will have a lot of fun playing labyrinth"}
 ]
