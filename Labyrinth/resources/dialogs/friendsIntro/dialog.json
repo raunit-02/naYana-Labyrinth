@@ -1,0 +1,8 @@
+[
+    {"Name":"Hiro", "Binary" : 1, "Emotion":"Happy","Text":", Hi I am Hiroshi but I prefer being called Hiro. It's nice to meet you."},
+    {"Name":"Gabriela","Binary" : 0, "Emotion":"Neutral","Text":"Hey man, I am Gabriela, good ot see you."},
+    {"Name":"Zulfi","Binary" : 1, "Emotion":"Happy","Text":" bro, I am Zulifiqar, call me zulfi, we gonna have some fun together."},
+    {"Name":"Ana","Binary" : 0, "Emotion":"Neutral","Text":"Hello, I am Anastasia. But call me Ana"},
+    {"Name":"Creator","Binary" : 1, "Emotion":"Smile","Text":" isn't it fun to meet new people, they are coming to your house to play labyrinth, have fun!!"}
+
+]
