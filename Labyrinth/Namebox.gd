@@ -13,6 +13,6 @@ func _on_Button_pressed():
 
 func savepn(datatosave):
 	var file = File.new()
-	file.open("res://user_data/playerName", File.WRITE)
+	file.open("res://user_data/playerName.txt", File.WRITE)
 	file.store_string(playerName)
 	file.close()

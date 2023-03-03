@@ -99,7 +99,7 @@ scale = Vector2( 0.429271, 0.484063 )
 texture = ExtResource( 7 )
 
 [node name="Indicator" type="Sprite" parent="Control/DialougeBox"]
-position = Vector2( 917, 524.146 )
+position = Vector2( 917, 524.483 )
 scale = Vector2( 0.637778, 0.352222 )
 texture = ExtResource( 4 )
 
