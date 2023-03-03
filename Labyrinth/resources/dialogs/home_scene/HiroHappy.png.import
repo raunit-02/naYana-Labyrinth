@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HiroHappy.png-c022bcc6441004566b9d8a38ccb64f5d.stex"
+path="res://.import/HiroHappy.png-0d13fd40b3ee79b160251c721e65f5b9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/dialogs/friendsIntro/HiroHappy.png"
-dest_files=[ "res://.import/HiroHappy.png-c022bcc6441004566b9d8a38ccb64f5d.stex" ]
+source_file="res://resources/dialogs/home_scene/HiroHappy.png"
+dest_files=[ "res://.import/HiroHappy.png-0d13fd40b3ee79b160251c721e65f5b9.stex" ]
 
 [params]
 
