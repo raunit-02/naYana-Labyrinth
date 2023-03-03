@@ -46,7 +46,7 @@ func nextPhrase() -> void:
 	var playerName = loadpn()
 	if phraseNum >= len(dialog):
 		queue_free()
-		var a = get_tree().change_scene("res://playerIntro.tscn")
+		var a = get_tree().change_scene("res://delay.tscn")
 		return a
 	
 	finished = false
