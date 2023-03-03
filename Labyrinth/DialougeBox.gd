@@ -39,7 +39,8 @@ func getDialog() -> Array:
 func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		queue_free()
-		return
+		var a = get_tree().change_scene("res://playerIntro.tscn")
+		return a
 	
 	finished = false
 	
@@ -64,9 +65,5 @@ func nextPhrase() -> void:
 	finished = true
 	phraseNum += 1
 	return
-	
-	
-	
-	
-	
-	
+
+
