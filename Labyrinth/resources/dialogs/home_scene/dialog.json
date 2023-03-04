@@ -1,0 +1,12 @@
+[
+    {"Name":"Hiro", "Binary" : 1, "Emotion":"Happy","Text":", I am so excited to play labyrinth"},
+    {"Name":"Gabriela","Binary" : 0, "Emotion":"Neutral","Text":"Hiro who invited you here?"},
+    {"Name":"Hiro", "Binary" : 0, "Emotion":"Sad","Text":"I am not invited "},
+    {"Name":"Ana","Binary" : 0, "Emotion":"Neutral","Text":"Gabriela stop troubling Hiro. You are always welcome to play with us"},
+    {"Name":"Ana","Binary" : 1, "Emotion":"Smile","Text":" am I right?"},
+    {"Name": "Player","Binary" : 0, "Emotion": "Happy", "Text": "yes you are right Ana"},
+    {"Name":"Gabriela","Binary" : 0, "Emotion":"Sad","Text":"Hiro I was just joking don't take it seriously, I am sorry you felt bad"},
+    {"Name":"Hiro", "Binary" : 0, "Emotion":"Happy","Text":"It's okay Gabriela, I kinda figured it out "},
+    {"Name":"Zulfi","Binary" : 0, "Emotion":"Happy","Text":"Come on all of you let's stop wasting time and start playing"},
+    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"}
+]
