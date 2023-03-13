@@ -1,20 +1,29 @@
 using Godot;
+using System;
 
-public class DialogScript : TextureRect
+public class DialogController : TextureRect
 {
-[Export] public string dialogPath = "";
-[Export] public float textSpeed = 0.05f;
+[Export]
+public string DialogPath = "";
 
-private Godot.Collections.Array dialog;
+[Export]
+public float TextSpeed = 0.05f;
+
+private Array dialog;
+
 private int phraseNum = 0;
 private bool finished = false;
 
 public override void _Ready()
 {
-    GetNode<Timer>("Timer").WaitTime = textSpeed;
+    GetNode<Timer>("Timer").WaitTime = TextSpeed;
     dialog = GetDialog();
-    GD.Assert(dialog != null, "Dialog not Found");
-    NextPhrase();
+    if (dialog == null)
+    {
+        GD.Print("Dialog not found.");
+        return;
+    }
+    nextPhrase();
 }
 
 public override void _Process(float delta)
@@ -24,32 +33,33 @@ public override void _Process(float delta)
     {
         if (finished)
         {
-            NextPhrase();
+            nextPhrase();
         }
         else
         {
-            GetNode<RichTextLabel>("Text").VisibleCharacters = GetNode<RichTextLabel>("Text").Text.Length;
+            GetNode<Label>("Text").VisibleCharacters = GetNode<Label>("Text").Text.Length;
         }
     }
 }
 
-private Godot.Collections.Array GetDialog()
+private Array GetDialog()
 {
     var f = new File();
-    GD.Assert(f.FileExists(dialogPath), "File does not exist");
-
-    f.Open(dialogPath, File.ModeFlags.Read);
-    var json = f.GetAsText();
-
-    var output = JSON.Parse(json);
-
-    if (output is Godot.Collections.Array)
+    if (!f.FileExists(DialogPath))
     {
-        return (Godot.Collections.Array)output;
+        GD.Print("File does not exist.");
+        return null;
+    }
+    f.Open(DialogPath, File.ModeFlags.Read);
+    var json = f.GetAsText();
+    var output = JSON.Parse(json);
+    if (output.Type == VariantType.Array)
+    {
+        return (Array)output;
     }
     else
     {
-        return new Godot.Collections.Array();
+        return new Array();
     }
 }
 
@@ -61,58 +71,53 @@ private string LoadPlayerName()
     return playerName;
 }
 
-private void NextPhrase()
+private void nextPhrase()
 {
     var playerName = LoadPlayerName();
     if (phraseNum >= dialog.Count)
     {
         QueueFree();
-        GetTree().ChangeScene("res://light.tscn");
+        GetTree().ChangeScene("res://delay.tscn");
         return;
     }
-
     finished = false;
-
+    var nameLabel = GetNode<Label>("Name");
     if ((string)dialog[phraseNum]["Name"] == "Player")
     {
-        GetNode<BBCodeLabel>("Name").Text = playerName;
+        nameLable.BbcodeText = playerName;
     }
     else
     {
-        GetNode<BBCodeLabel>("Name").Text = (string)dialog[phraseNum]["Name"];
+        nameLabel.BbcodeText = (string)dialog[phraseNum]["Name"];
     }
-
+    var textLabel = GetNode<Label>("Text");
     if ((int)dialog[phraseNum]["Binary"] == 1)
     {
-        GetNode<RichTextLabel>("Text").BbcodeText = playerName + (string)dialog[phraseNum]["Text"];
+        textLabel.BbcodeText = playerName + (string)dialog[phraseNum]["Text"];
     }
     else
     {
-        GetNode<RichTextLabel>("Text").BbcodeText = (string)dialog[phraseNum]["Text"];
+        textLabel.BbcodeText = (string)dialog[phraseNum]["Text"];
     }
-
-    GetNode<RichTextLabel>("Text").VisibleCharacters = 0;
-
+    textLabel.VisibleCharacters = 0;
     var f = new File();
-    var img = "res://resources/dialogs/home_scene/" + (string)dialog[phraseNum]["Name"] + (string)dialog[phraseNum]["Emotion"] + ".png";
+    var img = "res://resources/dialogs/friendsIntro/" + (string)dialog[phraseNum]["Name"] + (string)dialog[phraseNum]["Emotion"] + ".png";
     if (f.FileExists(img))
     {
-        GetNode<TextureRect>("Potrait").Texture = (Texture)ResourceLoader.Load(img);
+        GetNode<TextureRect>("Portrait").Texture = ResourceLoader.Load<Texture>(img);
     }
     else
     {
-        GetNode<TextureRect>("Potrait").Texture = null;
+        GetNode<TextureRect>("Portrait").Texture = null;
     }
-
-    while (GetNode<RichTextLabel>("Text").VisibleCharacters < GetNode<RichTextLabel>("Text").Text.Length)
+    while (textLabel.VisibleCharacters < textLabel.Text.Length)
     {
-        GetNode<RichTextLabel>("Text").VisibleCharacters += 1;
-
+        textLabel.VisibleCharacters += 1;
         GetNode<Timer>("Timer").Start();
         yield(GetNode<Timer>("Timer"), "timeout");
     }
-
     finished = true;
     phraseNum += 1;
 }
+
 }

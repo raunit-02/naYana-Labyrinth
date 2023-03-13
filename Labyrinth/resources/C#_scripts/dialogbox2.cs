@@ -1,11 +1,15 @@
 using Godot;
+using System;
 
-public class DialogScript : TextureRect
+public class DialogBox : TextureRect
 {
-[Export] public string dialogPath = "";
-[Export] public float textSpeed = 0.05f;
+[Export]
+public string dialogPath = "";
 
-private Godot.Collections.Array dialog;
+[Export(PropertyHint.Range, "0.01,1,0.01")]
+public float textSpeed = 0.05f;
+
+private Array dialog;
 private int phraseNum = 0;
 private bool finished = false;
 
@@ -13,13 +17,17 @@ public override void _Ready()
 {
     GetNode<Timer>("Timer").WaitTime = textSpeed;
     dialog = GetDialog();
-    GD.Assert(dialog != null, "Dialog not Found");
+    if (dialog == null)
+    {
+        GD.Print("Dialog not found");
+        return;
+    }
     NextPhrase();
 }
 
 public override void _Process(float delta)
 {
-    GetNode<Control>("Indicator").Visible = finished;
+    GetNode<Node2D>("Indicator").Visible = finished;
     if (Input.IsActionJustPressed("ui_accept"))
     {
         if (finished)
@@ -33,71 +41,76 @@ public override void _Process(float delta)
     }
 }
 
-private Godot.Collections.Array GetDialog()
+private Array GetDialog()
 {
     var f = new File();
-    GD.Assert(f.FileExists(dialogPath), "File does not exist");
+    if (!f.FileExists(dialogPath))
+    {
+        GD.Print("File does not exist");
+        return null;
+    }
 
-    f.Open(dialogPath, File.ModeFlags.Read);
+    f.Open(dialogPath, (int)File.ModeFlags.Read);
     var json = f.GetAsText();
+    f.Close();
 
     var output = JSON.Parse(json);
-
-    if (output is Godot.Collections.Array)
+    if (output.Type == Variant.Type.Array)
     {
-        return (Godot.Collections.Array)output;
+        return output.Array();
     }
     else
     {
-        return new Godot.Collections.Array();
+        return new Array();
     }
 }
 
-private string LoadPlayerName()
+private string LoadPN()
 {
     var file = new File();
-    file.Open("res://user_data/playerName.txt", File.ModeFlags.Read);
+    file.Open("res://user_data/playerName.txt", (int)File.ModeFlags.Read);
     var playerName = file.GetAsText();
+    file.Close();
     return playerName;
 }
 
 private void NextPhrase()
 {
-    var playerName = LoadPlayerName();
+    var playerName = LoadPN();
     if (phraseNum >= dialog.Count)
     {
         QueueFree();
-        GetTree().ChangeScene("res://light.tscn");
+        GetTree().ChangeScene("res://delay.tscn");
         return;
     }
 
     finished = false;
 
-    if ((string)dialog[phraseNum]["Name"] == "Player")
+    if (dialog[phraseNum]["Name"].ToString() == "Player")
     {
         GetNode<BBCodeLabel>("Name").Text = playerName;
     }
     else
     {
-        GetNode<BBCodeLabel>("Name").Text = (string)dialog[phraseNum]["Name"];
+        GetNode<BBCodeLabel>("Name").Text = dialog[phraseNum]["Name"].ToString();
     }
 
     if ((int)dialog[phraseNum]["Binary"] == 1)
     {
-        GetNode<RichTextLabel>("Text").BbcodeText = playerName + (string)dialog[phraseNum]["Text"];
+        GetNode<RichTextLabel>("Text").BbcodeText = playerName + dialog[phraseNum]["Text"].ToString();
     }
     else
     {
-        GetNode<RichTextLabel>("Text").BbcodeText = (string)dialog[phraseNum]["Text"];
+        GetNode<RichTextLabel>("Text").BbcodeText = dialog[phraseNum]["Text"].ToString();
     }
 
     GetNode<RichTextLabel>("Text").VisibleCharacters = 0;
 
     var f = new File();
-    var img = "res://resources/dialogs/home_scene/" + (string)dialog[phraseNum]["Name"] + (string)dialog[phraseNum]["Emotion"] + ".png";
+    var img = "res://resources/dialogs/friendsIntro/" + dialog[phraseNum]["Name"].ToString() + dialog[phraseNum]["Emotion"].ToString() + ".png";
     if (f.FileExists(img))
     {
-        GetNode<TextureRect>("Potrait").Texture = (Texture)ResourceLoader.Load(img);
+        GetNode<TextureRect>("Potrait").Texture = GD.Load<Texture>(img);
     }
     else
     {
@@ -115,4 +128,5 @@ private void NextPhrase()
     finished = true;
     phraseNum += 1;
 }
+
 }
