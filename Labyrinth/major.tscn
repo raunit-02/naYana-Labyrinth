@@ -19,11 +19,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7881, -31.0517, 74.7135 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.42392, 23.4427, -74.7058 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 72.2999, 0, 0, 0, 4.7336, 0, 0, 0, 57.9621, 9.86879, 18.2427, -70.335 )
+transform = Transform( 46.0996, 0, 0, 0, 4.7336, 0, 0, 0, 57.9621, 9.86879, 20.0682, -70.335 )
 shape = SubResource( 1 )
 
 [node name="maze" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.45348, 2.79045 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.87884, 2.79045 )
 
 [node name="StaticBody2" type="StaticBody" parent="maze"]
 
