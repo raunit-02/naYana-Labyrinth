@@ -11,7 +11,7 @@ dest_files=[ "res://.import/english.glb-c7e125699e1ccb52c47864d35ab7c88f.scn" ]
 
 [params]
 
-nodes/root_type="Spatial"
+nodes/root_type="KinematicBody"
 nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""

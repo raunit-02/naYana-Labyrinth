@@ -4,7 +4,7 @@ public class YourClassName : Node2D
 {
 private void _on_Button_pressed()
 {
-GetTree().ChangeScene("res://labyrinth.tscn");
+GetTree().ChangeScene("res://home.tscn");
 }
 }
 
