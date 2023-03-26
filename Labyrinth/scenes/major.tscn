@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://resources/3D_models/others/playarea.glb" type="PackedScene" id=1]
+[ext_resource path="res://resources/3D_models/maze/maze.glb" type="PackedScene" id=2]
+[ext_resource path="res://scenes/english.tscn" type="PackedScene" id=3]
+[ext_resource path="res://resources/3D_models/others/hometree.glb" type="PackedScene" id=4]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 1, 1.77534 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7881, -31.0517, 74.7135 )
+
+[node name="playarea" parent="StaticBody" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.42392, 23.4427, -74.7058 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 46.0996, 0, 0, 0, 4.7336, 0, 0, 0, 57.9621, 9.86879, 20.0682, -70.335 )
+shape = SubResource( 1 )
+
+[node name="maze" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.87884, 2.79045 )
+
+[node name="StaticBody2" type="StaticBody" parent="maze"]
+
+[node name="hometree" parent="maze/StaticBody2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.87023, -3.17808, -0.123246, -2.53318 )
+
+[node name="CollisionShape" type="CollisionShape" parent="maze/StaticBody2"]
+transform = Transform( 0.224943, 0, 0, 0, 10.6415, 0, 0, 0, 1.90258, 0, 3.98524, -3.50945 )
+shape = SubResource( 2 )
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.452455, -8.07536, 2.48475 )
