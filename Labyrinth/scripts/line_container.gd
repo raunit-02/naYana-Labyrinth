@@ -72,6 +72,8 @@ func change_line():
 		get_child(line_active).line_status = true
 	else:
 		print("game_over")
+		yield(get_tree().create_timer(2),"timeout")
+		get_tree().reload_current_scene()
 		emit_signal("game over", today_word)
 		
 

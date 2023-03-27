@@ -70,7 +70,7 @@ func _on_Button_pressed():
 func game_over(binary):
 	if binary == 0:
 		yield(get_tree().create_timer(3),"timeout")
-		get_tree().change_scene("res://scenes/scramble2.tscn")
+		get_tree().change_scene("res://scenes/scramble3.tscn")
 	elif binary == 1:
 		yield(get_tree().create_timer(2),"timeout")
 		get_tree().reload_current_scene()

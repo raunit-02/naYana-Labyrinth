@@ -2,7 +2,7 @@ extends Label
 
 var default = load("res://resources/highlights/defaulth.tres")
 var green = load("res://resources/highlights/greenbig.tres") 
-var orange = load("res://resources/highlights/orange.tres")
+var orange = load("res://resources/highlights/orangebig.tres")
 
 var array_status = [default,green,orange]
 

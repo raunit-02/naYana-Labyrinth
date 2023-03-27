@@ -7,7 +7,7 @@ func _ready():
 func game_over(word):
 	$Label.text = word.to_lower()
 	$AnimationPlayer.play("fade_in")
-	yield(get_tree().create_timer(5),"timeout")
+	yield(get_tree().create_timer(3),"timeout")
 	get_tree().change_scene("res://scenes/wordle2.tscn")
 
 
