@@ -3,6 +3,7 @@
 [ext_resource path="res://resources/fonts/naYanakamikRegular.otf" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=3]
+size = 50
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]

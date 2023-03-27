@@ -2,7 +2,7 @@ extends HBoxContainer
 
 export var line_status  =  false
 
-var word_input:String 
+var word_input:String
 
 signal word_to_container
 
@@ -39,7 +39,5 @@ func update_label():
 		get_child(i).text = ""
 	
 	for i in range(word_input.length()):
-		get_child(i).text = word_input[i]
+		get_child(i).text = word_input[i].to_lower()
 
-func _ready():
-	pass 
