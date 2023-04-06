@@ -22,7 +22,7 @@ script = ExtResource( 1 )
 autoplay = "idle"
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="3"]
-transform = Transform( 1, 0, 0, 0, 2.16864, 0, 0, 0, 1.0264, 0, 1.00479, 0 )
+transform = Transform( 0.766999, 0, 0, 0, 1.17773, 0, 0, 0, 0.684127, 0, 1.00479, 0 )
 shape = SubResource( 1 )
 
 [node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="4"]
@@ -30,14 +30,12 @@ master_player = NodePath("../AnimationPlayer")
 active = true
 data = {
 "active": true,
-"connections": [ "Idle", "blend2", 0, "Run", "blend2", 1, "blend2", "out", 0 ],
+"connections": [ "blend2", "out", 0, "Idle", "blend2", 0, "Run", "blend2", 1 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
-"animation": ExtResource( 5 ),
-"filter": [  ],
-"id": "Run",
-"position": Vector2( 89, 169 ),
-"type": "animation"
+"id": "out",
+"position": Vector2( 506, 84 ),
+"type": "output"
 }, {
 "animation": ExtResource( 4 ),
 "filter": [  ],
@@ -45,14 +43,16 @@ data = {
 "position": Vector2( 86, 45 ),
 "type": "animation"
 }, {
+"animation": ExtResource( 5 ),
+"filter": [  ],
+"id": "Run",
+"position": Vector2( 89, 169 ),
+"type": "animation"
+}, {
 "blend": 1.0,
 "filter": [  ],
 "id": "blend2",
 "position": Vector2( 261, 88 ),
 "type": "blend2"
-}, {
-"id": "out",
-"position": Vector2( 506, 84 ),
-"type": "output"
 } ]
 }

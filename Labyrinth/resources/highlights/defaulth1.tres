@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=6 format=2]
+
+[ext_resource path="res://resources/fonts/ShantellSans-Italic-VariableFont_BNCE,INFM,SPAC,wght.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resources/fonts/naYanakamikRegular.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.490196 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[resource]
+default_font = SubResource( 4 )
+Label/fonts/font = SubResource( 3 )
+Label/styles/normal = SubResource( 2 )

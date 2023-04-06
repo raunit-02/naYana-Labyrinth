@@ -1,7 +1,7 @@
 extends Camera
 
-export var distance = 4.0
-export var height = 2.0
+export var distance = 2.0
+export var height = 1.5
 
 func _ready():
 	set_physics_process(true)

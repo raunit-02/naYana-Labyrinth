@@ -1,2 +1,2 @@
-﻿62750
+﻿54892
 C:/Users/rauni/Downloads/Godot_v3.5.1-stable_mono_win64/Godot_v3.5.1-stable_mono_win64/Godot_v3.5.1-stable_mono_win64.exe
