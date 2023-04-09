@@ -117,6 +117,6 @@ func display():
 			$Error/AnimationPlayer.play("hide")
 	if c==9:
 		yield(get_tree().create_timer(3),"timeout")
-		get_tree().change_scene("res://scenes/decode2.tscn")
+		get_tree().change_scene("res://scenes/substring_post.tscn")
 	
 

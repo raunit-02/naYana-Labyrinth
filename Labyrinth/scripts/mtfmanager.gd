@@ -13,6 +13,9 @@ var card2
 var match_timer = Timer.new()
 var flip_timer = Timer.new()
 
+var score = 0
+var goal = 34
+
 func _ready():
 	fill_deck()
 	deal_deck() 
@@ -35,6 +38,7 @@ func fill_deck():
 			deck.append(Card.new(i,l[j]))
 
 func deal_deck():
+	#deck.shuffle()
 	var c = 0
 	while c < 68:
 		mtf.get_node('grid').add_child((deck[c]))
@@ -44,26 +48,33 @@ func choose_card(var c):
 	if card1 == null:
 		card1 = c
 		card1.flip()
-		#card1.set_disabled(true)
 	elif card2 == null:
 		card2 = c
-		#card2.set_disabled(true)
 		card2.flip()
 		check_cards()
 
 func check_cards():
 	if card1.value == card2.value:
-		card1.set_modulate(Color(0.6,0.6,0.6,0.5))
-		card2.set_modulate(Color(0.6,0.6,0.6,0.5))
-		card1 = null
-		card2 = null
+		if card1.suit ==card2.suit:
+			flip_timer.start(1)
+		else:
+			match_timer.start(1)
 	else:
 		flip_timer.start(1)
 
 func turnoverCards():
 	card1.flip()
 	card2.flip()
-	#card1.set_diabled(false)
-	#card2.set_diabled(false)
 	card1 = null
 	card2 = null
+
+func matchCards():
+	score = score + 1
+	card1.set_modulate(Color(0.6,0.6,0.6,0.5))
+	card2.set_modulate(Color(0.6,0.6,0.6,0.5))
+	card1 = null
+	card2 = null
+	print(score)
+	if score == goal:
+		get_tree().change_scene("res://scenes/mtf_post.tscn")
+	return score
