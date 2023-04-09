@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Button",
+"base": "TextureButton",
 "class": "Card",
 "language": "GDScript",
 "path": "res://scripts/card.gd"
@@ -22,6 +22,10 @@ _global_script_class_icons={
 
 config/name="NaYana: Labyrinth"
 config/icon="res://icon.png"
+
+[autoload]
+
+Mtfmanager="*res://scripts/mtfmanager.gd"
 
 [gui]
 
