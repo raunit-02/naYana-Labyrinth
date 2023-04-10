@@ -16,7 +16,7 @@ func _ready():
 
 func _physics_process(delta):
 	
-	camera = get_node("Target/Camera").get_global_transform()
+	camera = get_node("Target/ClippedCamera").get_global_transform()
 	var dir = Vector3()
 	
 	var is_moving = false
