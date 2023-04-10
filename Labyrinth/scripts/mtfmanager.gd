@@ -1,14 +1,11 @@
 extends Node
 
-onready var mtf = get_node("/root/mtf/")
-
-var deck = Array()
-
-
 var cardBack = preload("res://resources/2D_models/cards/cardBack_red2.png")
 
 var card1
 var card2
+
+var deck = Array()
 
 var match_timer = Timer.new()
 var flip_timer = Timer.new()
@@ -17,9 +14,7 @@ var score = 0
 var goal = 34
 
 func _ready():
-	fill_deck()
-	deal_deck() 
-	setup_timers()
+	pass
 
 func setup_timers():
 	flip_timer.connect("timeout",self,"turnoverCards")
@@ -38,6 +33,7 @@ func fill_deck():
 			deck.append(Card.new(i,l[j]))
 
 func deal_deck():
+	var mtf = get_node("/root/mtf/")
 	#deck.shuffle()
 	var c = 0
 	while c < 68:

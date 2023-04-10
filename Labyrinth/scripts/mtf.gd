@@ -1,5 +1,10 @@
 extends Control
-# DO NOT DELETE 
-#THIS SCRIPT IS INTETIONALLY LEFT BLANK
+
+
+
 func _ready():
-	pass 
+	Mtfmanager.fill_deck()
+	Mtfmanager.deal_deck()
+	Mtfmanager.setup_timers()
+
+
