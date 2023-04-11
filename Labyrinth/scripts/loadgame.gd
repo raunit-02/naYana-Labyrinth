@@ -38,5 +38,5 @@ func loadGame():
 		else:
 			a = get_tree().change_scene("res://scenes/major.tscn")
 	else:
-		a = get_tree().change_scene("res://playerIntro.tscn")
+		a = get_tree().change_scene("res://scenes/playerIntro.tscn")
 	return a

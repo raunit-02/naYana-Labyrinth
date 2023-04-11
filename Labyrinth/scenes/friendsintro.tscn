@@ -52,8 +52,8 @@ tracks/0/keys = {
 [node name="friendsintro" type="Node2D"]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 1023.0
+margin_bottom = 597.0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 511.5, 301 )

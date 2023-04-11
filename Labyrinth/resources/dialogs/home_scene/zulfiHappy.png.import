@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/zulfiHappy.png-af35793fce567785c8c99b77b0491927.stex"
+path="res://.import/ZulfiHappy.png-91eca11f1b3390902770161ab0667ac7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/dialogs/home_scene/zulfiHappy.png"
-dest_files=[ "res://.import/zulfiHappy.png-af35793fce567785c8c99b77b0491927.stex" ]
+source_file="res://resources/dialogs/home_scene/ZulfiHappy.png"
+dest_files=[ "res://.import/ZulfiHappy.png-91eca11f1b3390902770161ab0667ac7.stex" ]
 
 [params]
 

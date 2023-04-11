@@ -1,3 +1,109 @@
-[gd_scene format=2]
+[gd_scene load_steps=12 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://scripts/scrambleprdbx.gd" type="Script" id=1]
+[ext_resource path="res://resources/fonts/Anton-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://resources/fonts/ShantellSans-Italic-VariableFont_BNCE,INFM,SPAC,wght.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://resources/images/mazebg.png" type="Texture" id=4]
+[ext_resource path="res://resources/dialogs/intro_scene/CreatorSmile.png" type="Texture" id=5]
+[ext_resource path="res://resources/images/dialog_box.png" type="Texture" id=6]
+[ext_resource path="res://resources/images/next arrow.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 27
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 917, 520.625 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 917, 520.625 ), Vector2( 917, 525.625 ) ]
+}
+
+[node name="scramble_pre" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -606.81, 33 )
+scale = Vector2( 0.546924, 0.64454 )
+texture = ExtResource( 4 )
+offset = Vector2( 2050.21, 411.146 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1027.0
+margin_bottom = 956.0
+
+[node name="DialougeBox" type="TextureRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -8.0
+margin_bottom = -8.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 1
+script = ExtResource( 1 )
+dialogPath = "res://resources/dialogs/scramble_pre/dialog.json"
+
+[node name="Name" type="RichTextLabel" parent="Control/DialougeBox"]
+margin_left = 240.0
+margin_top = 356.0
+margin_right = 445.0
+margin_bottom = 438.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+scroll_active = false
+
+[node name="Text" type="RichTextLabel" parent="Control/DialougeBox"]
+margin_left = 97.0
+margin_top = 444.0
+margin_right = 868.0
+margin_bottom = 555.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+
+[node name="Potrait" type="Sprite" parent="Control/DialougeBox"]
+position = Vector2( 641, 222 )
+scale = Vector2( 0.429271, 0.484063 )
+texture = ExtResource( 5 )
+
+[node name="Indicator" type="Sprite" parent="Control/DialougeBox"]
+position = Vector2( 924.375, 525.122 )
+scale = Vector2( 0.572222, 0.352222 )
+texture = ExtResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/DialougeBox/Indicator"]
+autoplay = "idle"
+reset_on_save = false
+anims/RESET = SubResource( 3 )
+anims/idle = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="Control/DialougeBox"]
