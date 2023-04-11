@@ -55,6 +55,8 @@ func _physics_process(delta):
 			
 	velocity = move_and_slide(velocity, Vector3(0,1,0))	
 	
+	var anim_to_play = 'idle'
+	
 	if is_moving:
 		
 		# Rotate the player to direction
@@ -67,6 +69,7 @@ func _physics_process(delta):
 	
 	var speed = hv.length() / SPEED
 	
-	get_node("AnimationTreePlayer").blend2_node_set_amount("Idle_Run", speed)
-	
-	
+	anim_to_play = 'run-loop'
+	var current_animation = anim_player.get_current_animation() 
+	if current_animation != anim_to_play:
+		anim_player.play(anim_to_play)

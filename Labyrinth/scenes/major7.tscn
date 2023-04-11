@@ -1,0 +1,141 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://resources/3D_models/others/playarea.glb" type="PackedScene" id=1]
+[ext_resource path="res://scenes/hometree.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/maze.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/trigger.gd" type="Script" id=5]
+[ext_resource path="res://scripts/trigger2.gd" type="Script" id=6]
+[ext_resource path="res://scripts/trigger3.gd" type="Script" id=7]
+[ext_resource path="res://scripts/trigger4.gd" type="Script" id=8]
+[ext_resource path="res://scripts/trigger5.gd" type="Script" id=9]
+[ext_resource path="res://scripts/trigger6.gd" type="Script" id=10]
+[ext_resource path="res://scripts/trigger7.gd" type="Script" id=11]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7881, -31.0517, 74.7135 )
+
+[node name="playarea" parent="StaticBody" instance=ExtResource( 1 )]
+transform = Transform( 1.31174, 0, 0, 0, 1, 0, 0, 0, 1.25876, 9.42392, 23.4427, -74.7058 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 46.0996, 0, 0, 0, 4.7336, 0, 0, 0, 57.9621, 9.86879, 20.0682, -70.335 )
+shape = SubResource( 1 )
+
+[node name="maze_wide" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -16.1665, 23.1729, -99.5091 )
+
+[node name="hometree" parent="StaticBody/maze_wide" instance=ExtResource( 2 )]
+transform = Transform( 0.012037, 0, -0.75039, 0, 0.773924, 0, 0.832485, 0, 0.0133539, -24.3378, 0, -23.0573 )
+
+[node name="level1" type="Area" parent="."]
+transform = Transform( -8.22227, 0, 7.18814e-07, 0, 10.8655, 0, -2.38856e-07, 0, -2.7322, -2.94749, -5.3788, 12.7387 )
+script = ExtResource( 5 )
+
+[node name="MeshInstance" type="MeshInstance" parent="level1"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+visible = false
+mesh = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="level1"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="level2" type="Area" parent="."]
+transform = Transform( -2.38312e-07, 0, 2.72905, 0, 10.8655, 0, -5.45195, 0, -1.19291e-07, 12.0615, -5.3788, 19.0709 )
+script = ExtResource( 6 )
+
+[node name="MeshInstance" type="MeshInstance" parent="level2"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+visible = false
+mesh = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="level2"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="level3" type="Area" parent="."]
+transform = Transform( -3.46574e-07, 0, 3.96882, 0, 10.8655, 0, -5.45195, 0, -1.19291e-07, 30.6157, -5.3788, -5.37375 )
+script = ExtResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="level3"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+visible = false
+mesh = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="level3"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="level4" type="Area" parent="."]
+transform = Transform( -5.52352e-07, 0, 6.32531, 0, 10.8655, 0, -5.45195, 0, -1.19291e-07, 24.5135, -5.3788, -9.25387 )
+script = ExtResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="level4"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+visible = false
+mesh = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="level4"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="level5" type="Area" parent="."]
+transform = Transform( -3.38858e-07, 0, 3.88047, 0, 10.8655, 0, -5.45195, 0, -1.19291e-07, 18.7244, -5.3788, -6.99642 )
+script = ExtResource( 9 )
+
+[node name="MeshInstance" type="MeshInstance" parent="level5"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+visible = false
+mesh = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="level5"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="level6" type="Area" parent="."]
+transform = Transform( -3.27517e-07, 0, 3.7506, 0, 10.8655, 0, -5.45195, 0, -1.19291e-07, 13.7048, -5.3788, -1.84583 )
+script = ExtResource( 10 )
+
+[node name="MeshInstance" type="MeshInstance" parent="level6"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+visible = false
+mesh = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="level6"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+visible = false
+shape = SubResource( 3 )
+
+[node name="level7" type="Area" parent="."]
+transform = Transform( -2.20542e-07, 0, 2.52556, 0, 10.8655, 0, -5.45195, 0, -1.19291e-07, 9.10808, -5.3788, -10.6828 )
+script = ExtResource( 11 )
+
+[node name="MeshInstance" type="MeshInstance" parent="level7"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+visible = false
+mesh = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="level7"]
+transform = Transform( 0.234075, 0, 1.24521e-08, 0, 0.177449, 0, 1.24521e-08, 0, 0.37651, -0.00233975, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.655, -8.07536, -5.21064 )
+
+[connection signal="body_entered" from="level1" to="level1" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="level2" to="level2" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="level3" to="level3" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="level4" to="level4" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="level5" to="level5" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="level6" to="level6" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="level7" to="level7" method="_on_Area_body_entered"]

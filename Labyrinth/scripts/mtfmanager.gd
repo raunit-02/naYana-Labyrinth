@@ -34,7 +34,7 @@ func fill_deck():
 
 func deal_deck():
 	var mtf = get_node("/root/mtf/")
-	#deck.shuffle()
+	deck.shuffle()
 	var c = 0
 	while c < 68:
 		mtf.get_node('grid').add_child((deck[c]))
