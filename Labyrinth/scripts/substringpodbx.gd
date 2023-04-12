@@ -46,7 +46,7 @@ func nextPhrase() -> void:
 	var playerName = loadpn()
 	if phraseNum >= len(dialog):
 		queue_free()
-		var a = get_tree().change_scene("res://scenes/cheatsheet.tscn")
+		var a = get_tree().change_scene("res://scenes/saving6.tscn")
 		return a
 	
 	finished = false
@@ -64,7 +64,7 @@ func nextPhrase() -> void:
 	$Text.visible_characters = 0
 	
 	var f=File.new()
-	var img = "res://resources/dialogs/labyrinthintro/" + dialog[phraseNum]["Name"] + dialog[phraseNum]["Emotion"] + ".png"
+	var img = "res://resources/dialogs/substring_post/" + dialog[phraseNum]["Name"] + dialog[phraseNum]["Emotion"] + ".png"
 	if f.file_exists(img):
 		$Potrait.texture = load(img)
 	else:

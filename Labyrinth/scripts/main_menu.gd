@@ -20,7 +20,6 @@ func _on_NewGameButton_button_up():
 			continue
 	a = get_tree().change_scene(mainGameScene.resource_path)
 	return a
-	
 func _on_LoadGameButton_pressed():
 	a = get_tree().change_scene("res://scenes/loadgame.tscn")
 	return a
