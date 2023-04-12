@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://scripts/scramblepr2dbx.gd" type="Script" id=1]
+[ext_resource path="res://scripts/dcodepodbx2.gd" type="Script" id=1]
 [ext_resource path="res://resources/fonts/Anton-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://resources/fonts/ShantellSans-Italic-VariableFont_BNCE,INFM,SPAC,wght.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://resources/images/dialog_box.png" type="Texture" id=4]
@@ -70,7 +70,7 @@ texture = ExtResource( 4 )
 expand = true
 stretch_mode = 1
 script = ExtResource( 1 )
-dialogPath = "res://resources/dialogs/scramble_pre/dialog.json"
+dialogPath = "res://resources/dialogs/decode_post2/dialog.json"
 
 [node name="Name" type="RichTextLabel" parent="Control/DialougeBox"]
 margin_left = 240.0
