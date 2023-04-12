@@ -1,0 +1,104 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scripts/mtfcheatsheet.gd" type="Script" id=2]
+[ext_resource path="res://resources/images/cracked_concrete_wall_diff_4k.jpg" type="Texture" id=3]
+[ext_resource path="res://resources/images/clearButton.png" type="Texture" id=4]
+[ext_resource path="res://resources/images/Cheatsheet.png" type="Texture" id=5]
+[ext_resource path="res://scenes/ScrambleWord.tscn" type="PackedScene" id=6]
+[ext_resource path="res://resources/fonts/ShantellSans-Italic-VariableFont_BNCE,INFM,SPAC,wght.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://resources/fonts/naYanakamikRegular.otf" type="DynamicFontData" id=8]
+[ext_resource path="res://scripts/scramble3.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+size = 29
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0, 0, 0.509804 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 0.588235 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0, 0, 0, 0.470588 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 510, 298.5 )
+scale = Vector2( 0.251953, 0.147217 )
+texture = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 79.0
+margin_top = 57.0
+margin_right = 968.0
+margin_bottom = 548.0
+color = Color( 0, 0, 0, 0.427451 )
+script = ExtResource( 9 )
+
+[node name="ScrambleWord" parent="ColorRect" instance=ExtResource( 6 )]
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.5
+margin_top = 2.5
+margin_right = 153.5
+margin_bottom = 86.5
+color = Color( 0, 0, 0, 0.4 )
+
+[node name="answer" type="LineEdit" parent="ColorRect"]
+margin_left = 295.0
+margin_top = 245.0
+margin_right = 595.0
+margin_bottom = 326.0
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_icons/clear = ExtResource( 4 )
+custom_styles/read_only = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+align = 1
+max_length = 20
+clear_button_enabled = true
+placeholder_text = "Enter Answer"
+placeholder_alpha = 0.4
+
+[node name="Button" type="Button" parent="ColorRect"]
+margin_left = 348.0
+margin_top = 355.0
+margin_right = 543.0
+margin_bottom = 439.0
+custom_fonts/font = SubResource( 5 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+text = "Submit"
+icon_align = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 885.0
+margin_top = 442.0
+margin_right = 965.0
+margin_bottom = 542.0
+texture_normal = ExtResource( 5 )
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="ColorRect/Button" to="ColorRect" method="_on_Button_pressed"]
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_TextureButton_pressed"]

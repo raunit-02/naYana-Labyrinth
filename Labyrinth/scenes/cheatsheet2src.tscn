@@ -1,18 +1,16 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://scripts/cheatsheetsrc.gd" type="Script" id=1]
-[ext_resource path="res://resources/images/alphabets.png" type="Texture" id=2]
+[ext_resource path="res://scripts/cheatsheet2.gd" type="Script" id=1]
+[ext_resource path="res://resources/images/left_arrow.png" type="Texture" id=2]
 [ext_resource path="res://resources/images/right _arrow.png" type="Texture" id=3]
 [ext_resource path="res://resources/fonts/ShantellSans-Italic-VariableFont_BNCE,INFM,SPAC,wght.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://resources/images/vowels.png" type="Texture" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0, 0, 0, 0 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0, 0, 0, 0 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0, 0, 0, 0 )
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0, 0, 0 )
@@ -32,9 +30,9 @@ font_data = ExtResource( 4 )
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 511, 291.875 )
-scale = Vector2( 0.597688, 0.794516 )
-texture = ExtResource( 2 )
+position = Vector2( 510, 297 )
+scale = Vector2( 0.681363, 0.907975 )
+texture = ExtResource( 5 )
 script = ExtResource( 1 )
 
 [node name="Button" type="Button" parent="Sprite"]
@@ -42,10 +40,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -1019.0
-margin_top = -450.5
-margin_right = -865.0
-margin_bottom = -324.5
+margin_left = -902.5
+margin_top = -389.0
+margin_right = -748.5
+margin_bottom = -263.0
 rect_pivot_offset = Vector2( -2196.03, -265.086 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -53,8 +51,8 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="Sprite/Button"]
-position = Vector2( 70.3442, 62.3471 )
-scale = Vector2( 0.464028, 0.400415 )
+position = Vector2( 123.18, 62.3471 )
+scale = Vector2( 0.601965, 0.400415 )
 texture = ExtResource( 3 )
 
 [node name="Button2" type="Button" parent="Sprite"]
@@ -62,10 +60,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -1205.0
-margin_top = -463.0
-margin_right = -566.0
-margin_bottom = -387.0
+margin_left = -1068.0
+margin_top = -402.0
+margin_right = -429.0
+margin_bottom = -326.0
 rect_pivot_offset = Vector2( -1935.85, 62.6735 )
 custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 6 )
@@ -74,5 +72,25 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/normal = SubResource( 9 )
 text = "Close"
 
+[node name="Button3" type="Button" parent="Sprite"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -791.0
+margin_top = -389.0
+margin_right = -594.0
+margin_bottom = -263.0
+rect_pivot_offset = Vector2( -2196.03, -265.086 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Sprite/Button3"]
+position = Vector2( 70.3442, 62.3471 )
+scale = Vector2( 0.464028, 0.400415 )
+texture = ExtResource( 2 )
+
 [connection signal="pressed" from="Sprite/Button" to="Sprite" method="_on_Button_pressed"]
 [connection signal="pressed" from="Sprite/Button2" to="Sprite" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Sprite/Button3" to="Sprite" method="_on_Button_pressed"]
+[connection signal="pressed" from="Sprite/Button3" to="Sprite" method="_on_Button3_pressed"]

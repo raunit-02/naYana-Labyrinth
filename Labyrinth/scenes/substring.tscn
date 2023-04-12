@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://resources/images/cracked_concrete_wall_diff_4k.jpg" type="Texture" id=1]
 [ext_resource path="res://resources/fonts/ShantellSans-Italic-VariableFont_BNCE,INFM,SPAC,wght.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://scripts/substring.gd" type="Script" id=4]
 [ext_resource path="res://resources/fonts/naYanakamikRegular.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://resources/images/clearButton.png" type="Texture" id=6]
+[ext_resource path="res://resources/images/Cheatsheet.png" type="Texture" id=7]
+[ext_resource path="res://scripts/sscheatsheet.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -214,4 +216,13 @@ anims/RESET = SubResource( 12 )
 anims/hide = SubResource( 13 )
 anims/show = SubResource( 11 )
 
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 891.0
+margin_top = 461.0
+margin_right = 971.0
+margin_bottom = 561.0
+texture_normal = ExtResource( 7 )
+script = ExtResource( 8 )
+
 [connection signal="pressed" from="ColorRect/Button" to="ColorRect" method="_on_Button_pressed"]
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_TextureButton_pressed"]
