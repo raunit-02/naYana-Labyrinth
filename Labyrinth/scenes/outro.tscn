@@ -1,22 +1,22 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://scripts/scramble_post2.gd" type="Script" id=1]
-[ext_resource path="res://resources/fonts/Anton-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://resources/fonts/ShantellSans-Italic-VariableFont_BNCE,INFM,SPAC,wght.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://resources/images/dialog_box.png" type="Texture" id=4]
-[ext_resource path="res://resources/images/next arrow.png" type="Texture" id=5]
-[ext_resource path="res://resources/dialogs/intro_scene/CreatorSmile.png" type="Texture" id=6]
-[ext_resource path="res://resources/images/mazebg.png" type="Texture" id=7]
+[ext_resource path="res://resources/fonts/Anton-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resources/fonts/ShantellSans-Italic-VariableFont_BNCE,INFM,SPAC,wght.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://resources/images/dialog_box.png" type="Texture" id=3]
+[ext_resource path="res://resources/images/next arrow.png" type="Texture" id=4]
+[ext_resource path="res://resources/dialogs/intro_scene/CreatorSmile.png" type="Texture" id=5]
+[ext_resource path="res://resources/images/introbg.jpeg" type="Texture" id=6]
+[ext_resource path="res://scripts/outro.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 27
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -51,14 +51,17 @@ tracks/0/keys = {
 
 [node name="Node2D" type="Node2D"]
 
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -606.81, 33 )
-scale = Vector2( 0.546924, 0.64454 )
-texture = ExtResource( 7 )
-offset = Vector2( 2050.21, 411.146 )
+position = Vector2( 507, 302 )
+scale = Vector2( 2.85955, 2.98 )
+texture = ExtResource( 6 )
 
 [node name="Control" type="Control" parent="."]
-margin_right = 1027.0
+margin_right = 1016.0
 margin_bottom = 956.0
 
 [node name="DialougeBox" type="TextureRect" parent="Control"]
@@ -66,16 +69,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -8.0
 margin_bottom = -8.0
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 expand = true
 stretch_mode = 1
-script = ExtResource( 1 )
-dialogPath = "res://resources/dialogs/scramble_post2/dialog.json"
+script = ExtResource( 7 )
 
 [node name="Name" type="RichTextLabel" parent="Control/DialougeBox"]
-margin_left = 240.0
+margin_left = 224.0
 margin_top = 356.0
-margin_right = 445.0
+margin_right = 373.0
 margin_bottom = 438.0
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
@@ -93,12 +95,12 @@ bbcode_enabled = true
 [node name="Potrait" type="Sprite" parent="Control/DialougeBox"]
 position = Vector2( 641, 222 )
 scale = Vector2( 0.429271, 0.484063 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Indicator" type="Sprite" parent="Control/DialougeBox"]
-position = Vector2( 924.375, 525.122 )
-scale = Vector2( 0.572222, 0.352222 )
-texture = ExtResource( 5 )
+position = Vector2( 917, 520.628 )
+scale = Vector2( 0.637778, 0.352222 )
+texture = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/DialougeBox/Indicator"]
 autoplay = "idle"
