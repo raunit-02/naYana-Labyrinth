@@ -39,7 +39,7 @@ func getDialog() -> Array:
 func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		queue_free()
-		var a = get_tree().change_scene("res://scenes/playerIntro.tscn")
+		var a = get_tree().change_scene("res://scenes/credits.tscn")
 		return a
 	
 	finished = false
@@ -50,7 +50,7 @@ func nextPhrase() -> void:
 	$Text.visible_characters = 0
 	
 	var f=File.new()
-	var img = "res://resources/dialogs/intro_scene/" + dialog[phraseNum]["Name"] + dialog[phraseNum]["Emotion"] + ".png"
+	var img = "res://resources/dialogs/outro_scene/" + dialog[phraseNum]["Name"] + dialog[phraseNum]["Emotion"] + ".png"
 	if f.file_exists(img):
 		$Potrait.texture = load(img)
 	else:
