@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://scenes/scramblepodbx.gd" type="Script" id=1]
+[ext_resource path="res://scripts/scramblepodbx.gd" type="Script" id=1]
 [ext_resource path="res://resources/fonts/Anton-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://resources/fonts/ShantellSans-Italic-VariableFont_BNCE,INFM,SPAC,wght.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://resources/images/mazebg.png" type="Texture" id=4]
@@ -70,7 +70,6 @@ texture = ExtResource( 6 )
 expand = true
 stretch_mode = 1
 script = ExtResource( 1 )
-dialogPath = "res://resources/dialogs/scramble_post/dialog.json"
 
 [node name="Name" type="RichTextLabel" parent="Control/DialougeBox"]
 margin_left = 240.0

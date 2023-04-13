@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
+[ext_resource path="res://scripts/track2.gd" type="Script" id=1]
 [ext_resource path="res://scripts/mtfcheatsheet.gd" type="Script" id=2]
 [ext_resource path="res://resources/images/cracked_concrete_wall_diff_4k.jpg" type="Texture" id=3]
 [ext_resource path="res://resources/images/clearButton.png" type="Texture" id=4]
@@ -99,6 +100,9 @@ margin_right = 965.0
 margin_bottom = 542.0
 texture_normal = ExtResource( 5 )
 script = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource( 1 )
 
 [connection signal="pressed" from="ColorRect/Button" to="ColorRect" method="_on_Button_pressed"]
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_TextureButton_pressed"]

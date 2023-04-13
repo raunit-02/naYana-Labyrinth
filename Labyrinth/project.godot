@@ -24,8 +24,14 @@ config/name="NaYana: Labyrinth"
 run/main_scene="res://scenes/main menu.tscn"
 config/icon="res://icon.png"
 
+[audio]
+
+default_bus_layout=""
+
 [autoload]
 
+MusicPlayer="*res://scenes/music_player.tscn"
+Audiomanager="*res://scripts/audiomanager.gd"
 Mtfmanager="*res://scripts/mtfmanager.gd"
 
 [display]

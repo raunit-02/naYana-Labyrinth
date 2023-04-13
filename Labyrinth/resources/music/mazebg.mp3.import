@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mazebg.mp3-3619798749386a605b3b0dfc1723e8d4.mp3str"
+
+[deps]
+
+source_file="res://resources/music/mazebg.mp3"
+dest_files=[ "res://.import/mazebg.mp3-3619798749386a605b3b0dfc1723e8d4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

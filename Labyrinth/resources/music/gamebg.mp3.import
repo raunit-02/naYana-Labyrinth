@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gamebg.mp3-cb064a41a93cc720fe94cd04530f0ee7.mp3str"
+
+[deps]
+
+source_file="res://resources/music/gamebg.mp3"
+dest_files=[ "res://.import/gamebg.mp3-cb064a41a93cc720fe94cd04530f0ee7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
