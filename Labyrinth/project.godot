@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="NaYana: Labyrinth"
-run/main_scene="res://scenes/main menu.tscn"
+run/main_scene="res://scenes/Opening.tscn"
 config/icon="res://icon.png"
 
 [audio]
