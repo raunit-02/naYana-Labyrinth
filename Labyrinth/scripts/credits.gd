@@ -27,7 +27,8 @@ var credits = [
 		"Gnowledge Lab"
 	],[
 		"A game made with only Open Source software",
-		"Based on the naYana script created by G Nagarjuna and Vickram Crishna "
+		"Based on the naYana script created by G Nagarjuna and Vickram Crishna ",
+		"https://www.gnowledge.org/projects/naYana"
 	],[
 		"Programming",
 		"Raunit Singh",

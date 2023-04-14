@@ -1,4 +1,9 @@
 [
-    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"},
-    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "test"}
+    {"Name":"Hiro", "Binary" : 0, "Emotion":"Happy","Text":"its so good to be back"},
+    {"Name":"Gabriela","Binary" : 0, "Emotion":"Neutral","Text":"Yes it's a total relief"},
+    {"Name":"Ana","Binary" : 0, "Emotion":"Smile","Text":"Honestly though how many of you actually had fun"},
+    {"Name": "Player","Binary" : 0, "Emotion": "Happy", "Text": "pretty sure everyone did"},
+    {"Name":"Gabriela","Binary" : 0, "Emotion":"Neutral","Text":"Yes enough fun for a lifetime"},
+    {"Name":"Hiro", "Binary" : 0, "Emotion":"Happy","Text":"I might even want to play this game again"},
+    {"Name":"Zulfi","Binary" : 0, "Emotion":"Happy","Text":"Maybe someday Hiro, maybe some day"}
 ]

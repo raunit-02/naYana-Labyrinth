@@ -21,3 +21,5 @@ func _on_CheckButton_toggled(button_pressed):
 func _on_Button_pressed():
 	get_tree().change_scene('res://scenes/main menu.tscn')
 
+func _on_Button2_pressed():
+	OS.shell_open("https://www.gnowledge.org/projects/naYana")

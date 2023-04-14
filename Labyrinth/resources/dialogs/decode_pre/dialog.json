@@ -1,4 +1,7 @@
 [
-    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"},
-    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "test"}
+    {"Name" : "Ana", "Binary" : 0, "Emotion": "Neutral", "Text": "I think there is another wall here, My arm isn't able to go ahead"},
+    {"Name" : "Hiro", "Binary" : 0, "Emotion": "Neutral", "Text": "What is the obstical now???"},
+    {"Name" : "Zulfi", "Binary" : 0, "Emotion": "Neutral", "Text": "Look around we might find a clue like last time"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Neutrals", "Text": "There are inscriptions on the wall there"},
+    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "The invisible wall turns blue again"}
 ]

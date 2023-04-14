@@ -59,9 +59,9 @@ margin_bottom = 1080.0
 
 [node name="Line" type="Label" parent="CreditsContainer"]
 anchor_right = 1.0
-margin_top = 912.0
+margin_top = 776.0
 margin_right = -473.0
-margin_bottom = 937.0
+margin_bottom = 799.0
 size_flags_horizontal = 3
 text = "Credits line"
 align = 1

@@ -1,4 +1,8 @@
 [
-    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"},
-    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "test"}
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Angry", "Text": "Ouch! I think I hit an wall"},
+    {"Name" : "Ana", "Binary" : 1, "Emotion": "sad", "Text": " , You should be careful. The creator said the obsticals are going to be like invisible walls"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Neutrals", "Text": "I thought it was a metaphor"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Neutrals", "Text": "Anyways so we reached the first obstical....but does anyone know what it is"},
+    {"Name" : "zulfi", "Binary" : 0, "Emotion": "Neutral", "Text": "There is something on the wall.....looks like cards"},
+    {"Name": " ", "Binary": 0, "Emotion": "-", "Text":"Suddenly the Invisible wall turned blue with something inscribed on it"}
 ]

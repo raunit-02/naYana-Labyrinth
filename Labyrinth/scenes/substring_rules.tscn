@@ -1,8 +1,6 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://resources/fonts/ShantellSans-Italic-VariableFont_BNCE,INFM,SPAC,wght.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://resources/2D_models/cards/card-2-r.png" type="Texture" id=2]
-[ext_resource path="res://resources/2D_models/cards/card-1-r.png" type="Texture" id=3]
 [ext_resource path="res://scripts/rules5.gd" type="Script" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -47,44 +45,18 @@ margin_top = 38.0
 margin_right = 916.0
 margin_bottom = 147.0
 custom_fonts/font = SubResource( 6 )
-text = "To clear the upcominglevel you are required to match the following with 
-their naYana counterpart. Please note that you can refer to the cheat sheet 
+text = "To clear the upcoming level you are required to create ten words from a given word.
+ Please note that you can refer to the cheat sheet 
 provided to you but everytime you refer the sheet the level refreshes"
 
-[node name="Label2" type="Label" parent="ColorRect/Button"]
-margin_left = 21.0
-margin_top = 159.0
-margin_right = 916.0
-margin_bottom = 197.0
-custom_fonts/font = SubResource( 6 )
-text = "for exmple you select the following card"
-
-[node name="Label3" type="Label" parent="ColorRect/Button"]
-margin_left = 31.0
-margin_top = 291.0
-margin_right = 463.0
-margin_bottom = 329.0
-custom_fonts/font = SubResource( 6 )
-text = "its naYana counterpart is the card  is"
-
 [node name="Label4" type="Label" parent="ColorRect/Button"]
-margin_left = 22.0
-margin_top = 419.0
-margin_right = 454.0
-margin_bottom = 457.0
+margin_left = 23.0
+margin_top = 272.0
+margin_right = 933.0
+margin_bottom = 449.0
 custom_fonts/font = SubResource( 6 )
-text = "you need to select both cards consiqutivly if the card is not the required card 
-both cards flip..... .remeber their location and come back when you have the 
-correct card...... ALL the best have fun 
+text = "THis is the last time you wil be instructred on what you have to do to 
+clear the obstical. From the next obstical you will have to fugire it out on your own.
+ ALL the best have fun 
 
 click anywhere on the screen to continue"
-
-[node name="Card-2-r" type="Sprite" parent="ColorRect/Button"]
-position = Vector2( 336.5, 368.875 )
-scale = Vector2( 0.939286, 0.841667 )
-texture = ExtResource( 2 )
-
-[node name="Card-1-r" type="Sprite" parent="ColorRect/Button"]
-position = Vector2( 336.5, 239.5 )
-scale = Vector2( 0.842857, 0.855556 )
-texture = ExtResource( 3 )

@@ -70,6 +70,7 @@ texture = ExtResource( 7 )
 expand = true
 stretch_mode = 1
 script = ExtResource( 4 )
+dialogPath = "res://resources/dialogs/mtf_pre/dialog.json"
 
 [node name="Name" type="RichTextLabel" parent="Control/DialougeBox"]
 margin_left = 240.0

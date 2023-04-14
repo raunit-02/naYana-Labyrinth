@@ -1,4 +1,5 @@
 [
-    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"},
-    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "test"}
+    {"Name" : "Hiro", "Binary" : 0, "Emotion": "Happy", "Text": "Here there is another wall"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Neutrals", "Text": "There are weird boxes on the wall on the left of the invisble wall"},
+    {"Name" : "", "Binary" : 0, "Emotion": " ", "Text": "Raunit finished his sentence and the invisible wall became blue"}
 ]

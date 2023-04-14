@@ -1,4 +1,8 @@
 [
-    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"},
-    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "test"}
+    {"Name" : "zulfi", "Binary" : 0, "Emotion": "Angry", "Text": "Another one ......How many are there"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Neutrals", "Text": "I understang it can get annoying but we need to get of here and to do that we need to finish all of these"},   
+    {"Name" : "zulfi", "Binary" : 1, "Emotion": "Neutral", "Text": " You are right"},
+    {"Name" : "", "Binary" : 0, "Emotion": " ", "Text": "the invisible wall became blue"},
+    {"Name" : "Ana", "Binary" : 0, "Emotion": "Neutral", "Text": "The blue wall says that from the next obsticle we will have to fugire out what we need to do on our own"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Happy", "Text": "It's alright Ana we will do it togeather"}
 ]

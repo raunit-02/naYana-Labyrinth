@@ -64,7 +64,7 @@ func nextPhrase() -> void:
 	$Text.visible_characters = 0
 	
 	var f=File.new()
-	var img = "res://resources/dialogs/labyrinth_view/" + dialog[phraseNum]["Name"] + dialog[phraseNum]["Emotion"] + ".png"
+	var img = "res://resources/dialogs/labyrinth_intro/" + dialog[phraseNum]["Name"] + dialog[phraseNum]["Emotion"] + ".png"
 	if f.file_exists(img):
 		$Potrait.texture = load(img)
 	else:

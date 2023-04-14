@@ -73,6 +73,7 @@ texture = ExtResource( 3 )
 expand = true
 stretch_mode = 1
 script = ExtResource( 7 )
+dialogPath = "res://resources/dialogs/outro_scene/dialog.json"
 
 [node name="Name" type="RichTextLabel" parent="Control/DialougeBox"]
 margin_left = 224.0

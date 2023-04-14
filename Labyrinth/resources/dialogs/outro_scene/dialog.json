@@ -1,4 +1,9 @@
 [
-    {"Name":"Creator", "Emotion":"Smile","Text":"Greetings, Welcome to Labyrinth. They call me The Creator." },
-    {"Name":"Creator", "Emotion":"Smile","Text":"Before we start, Let's get to know you. What is your name?"}
+    {"Name":"Creator", "Emotion":"Smile","Text":"Congratulations! you managed to finish Labyrinth" },
+    {"Name":"Creator", "Emotion":"Smile","Text":"Labyrinth was actually designed to teach players like you about naYana"},
+    {"Name":"Creator", "Emotion":"Smile","Text":"What is naYana you might ask"},
+    {"Name":"Creator", "Emotion":"Smile","Text":"naYana is a phonetic script "},
+    {"Name":"Creator", "Emotion":"Smile","Text":"it is developed to reduce the time spent by people in becoming literate in any language to promote universal literacy."},
+    {"Name":"Creator", "Emotion":"Smile","Text":"To know more about naYana you can go to the game option tab and click on th 'About naYana' button."},
+    {"Name":"Creator", "Emotion":"Smile","Text":"Thank you for playing labyrinth, Hope you had fun"}
 ]

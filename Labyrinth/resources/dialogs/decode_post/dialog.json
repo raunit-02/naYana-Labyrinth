@@ -1,4 +1,8 @@
 [
-    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"},
-    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "test"}
+    {"Name" : "Gabriela", "Binary" : 0, "Emotion": "Neutral", "Text": "that was tricky, but I think we are getting a hang of it so that is good"},
+    {"Name" : "Ana", "Binary" : 0, "Emotion": "Smile", "Text": "Yes we will be able to get out of here soon"},
+    {"Name" : "Zulfi", "Binary" : 0, "Emotion": "Neutral", "Text": "Don't get to exiceted the creator said the labyrinth has a mind of its own it might make our way ahead tougher"},
+    {"Name" : "hiro", "Binary" : 0, "Emotion": "Neutral", "Text": "Zulfi is right we should be careful"},
+    {"Name" : "Gabriela", "Binary" : 0, "Emotion": "Neutral", "Text": "Lets move forward"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Neutrals", "Text": "Yes"}
 ]

@@ -1,4 +1,23 @@
 [
-    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"},
-    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "test"}
+    {"Name" : "zulfi", "Binary" : 1, "Emotion": "Sad", "Text": "  where are we this place is so weird "},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Sad", "Text": " How am I supposed to know, I just put the cartrage in my console"},
+    {"Name" : "Ana", "Binary" : 1, "Emotion": "Neutral", "Text": " What just happened how are we here"},
+    {"Name" : "Creator", "Binary" : 1, "Emotion": "Sad", "Text": "  ,it is my fault you all are here. This is the labyrinth"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Neutrals", "Text": "  Wait you mean the game"},
+    {"Name" : "Creator", "Binary" : 0, "Emotion": "Sad", "Text": "  yes I guess there was a huge bug in the game that sucked you people in"},
+    {"Name" : "Hiro", "Binary" : 0, "Emotion": "Neutral", "Text": " Creator then how are you here? You were not with us"},
+    {"Name" : "Creator", "Binary" : 0, "Emotion": "Sad", "Text": "  as I created the labyrinth I can come and go as In please but you cannot"},
+    {"Name" : "Creator", "Binary" : 0, "Emotion": "Sad", "Text": "  You will have to solve it and find your own way out"},
+    {"Name" : "Gabriela", "Binary" : 0, "Emotion": "Neutral", "Text": "Creator can't you help us after all you created the labyrith"},
+    {"Name" : "Creator", "Binary" : 0, "Emotion": "Sad", "Text": "I really wantto but I cannot"},
+    {"Name" : "Creator", "Binary" : 0, "Emotion": "Sad", "Text": " But I can give you this this is a cheatsheet that will help you but be careful do not talk about the sheet"},
+    {"Name" : "Ana", "Binary" : 1, "Emotion": "Neutral", "Text": " Why?"},
+    {"Name" : "Creator", "Binary" : 0, "Emotion": "Sad", "Text": "you see the labyrinth has a mind of it's own if I gets to know you are getting help in anyway it will destroy whateverr is helping you"},
+    {"Name" : "Creator", "Binary" : 0, "Emotion": "Sad", "Text": "As I created the labyrinth till its with menothing will happen to it but as soon as I hand it over you won't be able to use it untill you finish the first obsticle"},
+    {"Name" : "Gabriela", "Binary" : 0, "Emotion": "Neutral", "Text":"What is this sheet about?"},
+    {"Name" : "Creator", "Binary" : 0, "Emotion": "Sad", "Text": "The Labyrinth has a special script called naYana and it uses it to create obsticals you will need to understand the script to go back home. That is where the sheet comes in"},
+    {"Name" : "Creator", "Binary" : 0, "Emotion": "Sad", "Text": "spotting obsticals is very hard for the naked eye so be careful when you run in. whenever you reach an obstical it will be like running into a invisible wall"},
+    {"Name" : "Creator", "Binary" : 0, "Emotion": "Sad", "Text": "I will give you a quick peek before I hand it over. All the best. See you on the other side ....Hopefully "},
+    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " is given the cheatsheet by the creator after showing it to everyone"}
+
 ]

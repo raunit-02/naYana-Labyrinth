@@ -1,4 +1,5 @@
 [
-    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"},
-    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "test"}
+    {"Name" : "Zulfi", "Binary" : 0, "Emotion": "Happy", "Text": "It's done lets get out of here"},
+    {"Name" : "Hiro", "Binary" : 0, "Emotion": "Happy", "Text": "I see a protal, maybe it will take us home"}
+    
 ]

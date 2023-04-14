@@ -1,4 +1,5 @@
 [
-    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"},
-    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": " test"}
+    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "Gabriela was supecting that they had reached another wall. She threw a stone on the wall to confirm and the wall turned blue"},
+    {"Name" : "Ana", "Binary" : 0, "Emotion": "Smile", "Text": "Quick thinking Gabriela"},
+    {"Name" : "Gabriela", "Binary" : 0, "Emotion": "Happy", "Text": "Thanks Ana"}
 ]

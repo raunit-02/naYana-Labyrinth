@@ -1,4 +1,10 @@
 [
-    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"},
-    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "test"}
+    {"Name" : "Hiro", "Binary" : 0, "Emotion": "Happy", "Text": "Till we have the cheatsheet there is no stopping us"},
+    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " was holding the cheatsheet and suddelny it went up in flames"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Sad", "Text": "What just happened?"},
+    {"Name" : "Ana", "Binary" : 0, "Emotion": "Neutral", "Text": "The Creator said the labyrinth had a mind of its own I can see that now"},
+    {"Name" : "Gabriela", "Binary" : 0, "Emotion": "Neutral", "Text": "What are we gonna do now?"},
+    {"Name" : "Zulfi", "Binary" : 0, "Emotion": "Neutral", "Text": "No choice but to keep moving"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Neutrals", "Text": "Zulfi is right, let's move"}
+
 ]

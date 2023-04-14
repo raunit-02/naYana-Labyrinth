@@ -1,4 +1,8 @@
 [
-    {"Name" : " ", "Binary" : 1, "Emotion": "-", "Text": " Inserts the cartridge in his gaming console"},
-    {"Name" : " ", "Binary" : 0, "Emotion": "-", "Text": "test"}
+    {"Name" : "Hiro", "Binary" : 0, "Emotion": "Happy", "Text": "The invisible wall is gone I am able to move ahead"},
+    {"Name" : "Hiro", "Binary" : 0, "Emotion": "Happy", "Text": "That was so confusing my brain is hurting atleast its over"},
+    {"Name" : "Gabriela", "Binary" : 0, "Emotion": "Happy", "Text": "Hiro that was just he first obsticle I am pretty sure there will be more"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Neutrals", "Text": "Gabriela is right. We should be careful moving forward"},
+    {"Name" : "Zulfi", "Binary" : 1, "Emotion": "Happy", "Text": " , Hopefully don't crash into another wall"},
+    {"Name" : "Player", "Binary" : 0, "Emotion": "Happy", "Text": "I'll try not to Zulfi. Let's move ahead"}
 ]

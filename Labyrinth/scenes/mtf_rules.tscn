@@ -47,9 +47,9 @@ margin_top = 38.0
 margin_right = 916.0
 margin_bottom = 147.0
 custom_fonts/font = SubResource( 6 )
-text = "To clear the upcominglevel you are required to match the following with 
-their naYana counterpart. Please note that you can refer to the cheat sheet 
-provided to you but everytime you refer the sheet the level refreshes"
+text = "To clear the upcoming level you are required to match the following with 
+their naYana counterpart. Please note that you cannot refer to the cheat sheet 
+provided."
 
 [node name="Label2" type="Label" parent="ColorRect/Button"]
 margin_left = 21.0
