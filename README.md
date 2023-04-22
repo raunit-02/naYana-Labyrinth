@@ -2,7 +2,7 @@
 <hr/>
 
 ## Introduction
-NaYana: Labryrinth is a game that was created to promote the learning and usage naYana script created under [Gnowledge Lab](https://www.gnowledge.org/index.html) An R&D laboratory of HBCSE (Homi Bhabha Centre for Science Education), TIFR (Tata Institute of Fundamental Research), Mumbai, India. The lab’s focus is on designing and developing discourse based collaborative constructionist learning environoments AKA studios. We also develop, design and distribute information and communication technology for studio based STEM education and share our research and developed material to the rest of the world under Creative Commons license. <br/>
+NaYana: Labryrinth is a game that was created to promote the learning and usage naYana script created under [Gnowledge Lab](https://www.gnowledge.org/index.html) An R&D laboratory of HBCSE (Homi Bhabha Centre for Science Education), TIFR (Tata Institute of Fundamental Research), Mumbai, India. The lab’s focus is on designing and developing discourse based collaborative constructionist learning environoments AKA studios.  <br/>
 
 [HBCSE, TIFR](https://www.hbcse.tifr.res.in/)
 
@@ -24,7 +24,7 @@ NaYana is a phonetic alphabet that maps to International Phonetic alphabet (IPA)
 <br/>
 
 ## About Labyrinth
-The story of labyrinth revolves around a player (named by user) who is given a cartridge for the ggame by the creator and when he and his friends get to playing the game they get sucked into the game and find themselves trapped within a labyrinth they have to navigate their way out of the labyrinth while solving various tasks which are - <br/>
+The story of labyrinth revolves around a player (named by user) who is given a cartridge for the game by the creator and when he and his friends get to playing the game they get sucked into the game and find themselves trapped within a labyrinth they have to navigate their way out of the labyrinth while solving various tasks which are - <br/>
 
 1. Match the following (mtf) (1 round): here instead of a traditional match the following the player has to set of 68 cards, 34 naYana Charecters and their 34 English equivalents they have to match the naYana Charecters to their english counterparts. This is the first task to get the player to understand the naYana charecters. 
 
