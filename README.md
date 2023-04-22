@@ -2,7 +2,7 @@
 <hr/>
 
 ## Introduction
-NaYana: Labryrinth is a game that was created to promote the learning and usage naYana script created under [Gnowledge Lab](https://www.gnowledge.org/index.html) An R&D laboratory of HBCSE (Homi Bhabha Centre for Science Education), TIFR (Tata Institute of Fundamental Research), Mumbai, India. The lab’s focus is on designing and developing discourse based collaborative constructionist learning environoments AKA studios.  <br/>
+NaYana: Labryrinth is a game that was created to promote the learning and usage naYana script created under [Gnowledge Lab](https://www.gnowledge.org/index.html) An R&D laboratory of HBCSE (Homi Bhabha Centre for Science Education), TIFR (Tata Institute of Fundamental Research), Mumbai, India. The lab’s focus is on designing and developing discourse based collaborative constructionist learning environoments AKA studios. We also develop, design and distribute information and communication technology for studio based STEM education and share our research and developed material to the rest of the world under Creative Commons license.  <br/>
 
 [HBCSE, TIFR](https://www.hbcse.tifr.res.in/)
 
